@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/php-80
+FROM registry.access.redhat.com/ubi9/php-81
 
 # https://packagist.org/packages/bolt/project
 ENV BOLT_PROJECT_VERSION 2.3.10
@@ -19,7 +19,7 @@ RUN rm /etc/httpd/conf.d/ssl.conf \
  && touch .env.prod.local
 
 
-RUN mkdir /run/php-fpm \
+RUN mkdir -p /run/php-fpm \
   && chgrp -R 0 /var/log/httpd /var/run/httpd /run/php-fpm .env* \
   && chmod -R g=u /var/log/httpd /var/run/httpd /run/php-fpm .env*
 
