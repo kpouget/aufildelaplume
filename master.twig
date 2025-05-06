@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="agentic AI, AI startup, AI features, document AI, code AI, review AI, AI solutions">
-    <meta name="description" content="Showcase our agentic AI startup and explore our three main features: Document, Code, and Review. Revolutionize your workflow with intelligent AI solutions.">
+    <meta name="keywords" content="graphothérapie, rééducation, écriture, Cahors, Lot">
+    <meta name="description" content="Cabinet de graphothérapie pour la rééducation de l'écriture, sur Cahors 46.">
     <meta property="og:site_name" content="Au fil de la Plume - Graphothérapie">
     <meta property="og:url" content="https://www.aufildelaplume.org/">
     <meta property="og:type" content="website">
@@ -16,7 +16,11 @@
     <meta name="msapplication-navbutton-color" content="#FFEB88">
     <meta name="apple-mobile-web-app-status-bar-style" content="#FFEB88">
     <title>
+      {% if record.title %}
       {{- record.title ~ ' | ' -}}
+      {% else %}
+        Graphothérapie | Marine Pouget | 
+      {% endif %}
       {{- config.get('general/sitename') -}} 
     </title>
     <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/fav-icon/icon.svg', 'theme') }}">
@@ -38,78 +42,6 @@
 
 <body>
 	<div class="main-page-wrapper">
-		<!-- ===================================================
-			Loading Transition
-		==================================================== -->
-		<div id="preloader">
-			<div id="ctn-preloader" class="ctn-preloader">
-				<div class="icon"><img src="{{ asset('images/loader.svg', 'theme') }}" alt="" class="m-auto d-block"> <span></span></div>
-				<div class="txt-loading">
-					<span data-text-preloader="A" class="letters-loading">
-						A
-					</span>
-					<span data-text-preloader="U" class="letters-loading">
-						U
-					</span>
-
-					<span data-text-preloader=" " class="letters-loading">
-						&nbsp
-					</span>
-
-
-					<span data-text-preloader="F" class="letters-loading">
-						F
-					</span>
-					<span data-text-preloader="I" class="letters-loading">
-						I
-					</span>
-					<span data-text-preloader="L" class="letters-loading">
-						L
-					</span>
-
-					<span data-text-preloader=" " class="letters-loading">
-						&nbsp
-					</span>
-
-					<span data-text-preloader="D" class="letters-loading">
-						D
-					</span>
-					<span data-text-preloader="E" class="letters-loading">
-						E
-					</span>
-
-					<span data-text-preloader=" " class="letters-loading">
-						&nbsp
-					</span>
-
-					<span data-text-preloader="L" class="letters-loading">
-						L
-					</span>
-					<span data-text-preloader="A" class="letters-loading">
-						A
-					</span>
-					<span data-text-preloader=" " class="letters-loading">
-						&nbsp
-					</span>
-					<span data-text-preloader="P" class="letters-loading">
-						P
-					</span>
-					<span data-text-preloader="L" class="letters-loading">
-						L
-					</span>
-					<span data-text-preloader="U" class="letters-loading">
-						U
-					</span>
-					<span data-text-preloader="M" class="letters-loading">
-						M
-					</span>
-					<span data-text-preloader="E" class="letters-loading">
-						E
-					</span>
-                </div>
-			</div>
-		</div>
-
 		<!--
 		=============================================
 			Theme Main Menu
@@ -120,14 +52,14 @@
 				<div class="top-header position-relative">
 					<div class="d-flex align-items-center">
 						<div class="logo order-lg-0">
-							<a href="index.html" class="d-flex align-items-center">
+							<a href="/" class="d-flex align-items-center">
 								<img src="{{ asset('images/logo/logo_01.svg', 'theme') }}" height="45px" alt="">
-                                                                &nbsp; Au fil de la Plume -- Graphotérapie
+                                                                Au fil de la Plume
 							</a>
 						</div>
 						<!-- logo -->
 
-                        <nav class="navbar navbar-expand-lg p0 order-lg-2">
+                                                <nav class="navbar navbar-expand-lg p0 order-lg-2">
 							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
 								data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
 								aria-label="Toggle navigation">
@@ -189,9 +121,10 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="footer-intro mb-30 md-mb-50 me-xxl-5 pe-xxl-4">
-								<a href="index.html"><img src="{{ asset('images/logo/logo_02.svg', 'theme') }}" alt=""></a>
-								<!--<p>We are 300+ specialists across investment strategy and business </p>-->
-								<h6>Viendez nous voir!</h6>
+								
+								<h3>Marine Pouget</h3>
+								<h6>Graphothérapie</h6>
+
                                                                 <!--
 								<ul class="style-none d-flex social-icon">
 									<li><a href="https://github.com/pullhero/"><i class="fa-brands fa-github"></i></a></li>
@@ -226,6 +159,7 @@
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-3 col-6">
+                                                  <!--
 							<div class="text-end">
 
 								<div class="footer-nav d-inline-block text-start mb-40">
@@ -238,8 +172,8 @@
 										<li><a href="blog-v1.html">Careers</a></li>
 									</ul>
 								</div>
-
 							</div>
+                                                        -->
 						</div>
 
 					</div>
@@ -250,12 +184,14 @@
 				<div class="bottom-footer">
 					<div class="d-md-flex align-items-center justify-content-between">
 						<div class="d-flex justify-content-center align-items-center sm-mb-10 order-md-last">
+                                                  <!--
 							<ul class="style-none d-flex justify-content-center">
 								<li><a href="https://github.com/pullhero/review">Review  &nbsp;.</a></li>
 								<li><a href="https://github.com/pullhero/code">Code &nbsp;.</a></li>
 								<li><a href="https://github.com/pullhero/document">Document &nbsp;.</a></li>
 								<li><a href="https://github.com/pullhero/consult">Consult</a></li>
 							</ul>
+                                                        -->
 						</div>
 						<p class="copyright-text text-center m0">Marine Pouget - Au fil de la plume © 2025 tous droits réservés.</p>
 					</div>
