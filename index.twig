@@ -1,43 +1,39 @@
 {% extends 'master.twig' %}
 
-{% block headerClass %}class="alt"{% endblock headerClass %}
-
-{% block banner %}
-<!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <div class="logo"><img class=icon alt="{{ config.get('general/sitename') -}}" src="{{ asset('images/logo.svg' , 'theme')}}"/></span></div>
-            <h2>{{ config.get('general/sitename') -}}</h2>
-            <p>{{ config.get('general/payoff') }}</p>
-        </div>
-    </section>
-{% endblock banner %}
-
 {% block content %}
+		<!--
+		=============================================
+			Hero Banner
+		==============================================
+		-->
+		<div class="hero-banner-three position-relative z-1 pt-200 lg-pt-120 pb-140 lg-pb-100 sm-pb-20">
+			<div class="container position-relative mt-40">
+				<div class="row">
+					<div class="col-lg-7 col-md-8">
+						<div class="tag d-inline-block position-relative mb-50 lg-mb-40" data-sal="slide-down" data-sal-duration="1000">Au fil de la Plume</div>
+						<h1 class="hero-heading" data-sal="slide-up" data-sal-duration="800">Rééduction<br/>de l'Écriture <span>Graphothérapie</span></h1>
+                        <p class="fs-22 text-dark mt-55 lg-mt-30 mb-25 lg-mb-20" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">Enfants, adolescents et adultes.</p>
+<!--
+						<ul class="style-none d-flex flex-wrap mb-55">
+							<li class="mt-20 me-4"  data-sal="slide-right" data-sal-duration="800" data-sal-delay="500"><a href="#" class="btn-four xl">Start Chatting</a></li>
+							<li class="mt-20 ms-2 d-flex align-items-center call-btn"  data-sal="slide-left" data-sal-duration="800" data-sal-delay="500">
+								<img src="{{ asset('images/icon/icon_21.svg', 'theme') }}" alt="" class="me-3">
+								<a href="#" >Call +88 66 45 44 57</a>
+							</li>
+						</ul>
+-->
+						<div class="customer-count" data-sal="slide-up" data-sal-duration="800" data-sal-delay="700">
+                        </div>
+                        <!-- /.customer-count -->
+					</div>
+				</div>
+			</div>
 
-    {% setcontent lastPages = 'pages' earliest limit 10 %}
-    {% for page in lastPages %}
-        <!-- Loop {{ loop.index }} -->
-        <section id="{% if loop.first %}one{% elseif loop.index == 2 %}two{% else %}three{% endif %}"
-                 class="wrapper {% if loop.index % 2 == 0%}alt {% endif %}spotlight style{{ loop.index }}">
-                <div class="inner">
-                    {% if page|link is not empty %}
-                    <a href="{{ page|link }}" class="image">
-                      <img src="{{ thumbnail(page.image, 500, 500) }}" title="Photo: Philippe Tyssandier">
-                    </a>
-                    {% endif %}
-                    <div class="content">
-                        <h2 class="major"><a href="{{ page|link }}">{{ page.title }}</a></h2>
-                        <p>{{ page.teaser }}</p>
-                        {# <a href="{{ page|link }}" class="special">Plus d'infos</a> #}
+			<img src="{{ asset('images/assets/screen_03.png', 'theme') }}" alt="" class="shapes screen_01">
+			<img src="{{ asset('images/shape/shape_12.svg', 'theme') }}" alt="" class="shapes screen_02">
+		</div>
+		<!-- /.hero-banner-three -->
 
-                        {% for entry in page|related %}
-                            &nbsp;•&nbsp;<span><a href="{{ entry|link }}" title="{{ entry.teaser }}" style="white-space: nowrap;">{{ entry.title }}</a></span> 
-                        {% endfor %}
-                    </div>
-                    </div>
 
-            </section>
 
-    {% endfor %}
 {% endblock content %}

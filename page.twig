@@ -2,50 +2,38 @@
 
 {% block content %}
 
-{% if record.image is not empty %}
-<style>
-  @media screen and (max-width: 4000px) {
-    #wrapper > header {
-      background-image: url("{{ record.image }}");
-    }
-  }
-</style>
-{% endif %}
-
-<header>
-    <div class="inner">
-        <h2><a href="/" title="Retour à la page d'accueil">{{ record.title }}</a></h2>
-        <p>{{ record.teaser }}</p>
+<!--
+    =====================================================
+    Blog Section Two
+    =====================================================
+  -->
+<div class="blog-section-two position-relative z-1 pt-110 lg-pt-100 pb-150 lg-pb-100">
+  <div class="container">
+    <div class="title-one mb-80 lg-mb-40" data-sal="slide-up" data-sal-duration="800">
+      <div class="upper-title">{{ record.title }}</div>
+      <!--<h2>C’est la rééducation du geste graphique</h2>-->
+      <h3>{{ record.teaser }}</h3>
     </div>
-</header>
+    <!-- /.title-one -->
+  </div>
 
-<!-- Content -->
-    <div class="wrapper">
-        <div class="inner">
-            {{ record.body }}
-
-            {% set related_entries = record|related %}
-            {% if related_entries is not empty %}
-            <section class="features">
-                {% for entry in page|related %}
-                        <article>
-                            <a class="image" href="{{ entry|link }}"><img src="{{ entry.image|thumbnail(572, 333, "c") }}" alt="" /></a>
-                            <a href="{{ entry|link }}"><h3 class="major">{{ entry.title }}</h3></a>
-                            <p>{{ entry.teaser }}</p>
-                            <a href="{{ entry|link }}" class="special">Plus de photos</a>
-                        </article>
-                    {% endfor %}
-            </section>
-            {% endif %}
-
+  <article class="blog-meta-one version-two" data-sal="slide-up" data-sal-duration="800">
+    <div class="line" style="background-color: #9BFFFF;"></div>
+    <div class="numb"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xxl-7 col-lg-6 order-lg-last">
+          <div class="img-meta-two" style="background-image: url(images/blog/code_review.jpg);"></div>
         </div>
-
-  {% for image in record.gallery %}
-    <a href="{{ image }}" class="magnific image">
-      <img src="{{ thumbnail(image) }}" height="276" alt="{{ image.alt }}" title="{{ image.alt }}">
-    </a>
-  {% endfor %}
-
+        <div class="col-lg-5">
+          <div class="post-meta">
+            {{ record.body }}
+          </div>
+          <!-- /.post-meta -->
+        </div>
+      </div>
     </div>
-
+  </article>
+  <!-- /.blog-meta-one -->
+</div>
 {% endblock content %}

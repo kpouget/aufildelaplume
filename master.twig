@@ -1,65 +1,160 @@
-<!DOCTYPE HTML>
-<!--
-    Solid State by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>
-          {%- if record|default and record.title -%}
-            {{- record.title ~ ' | ' -}}
-          {%- endif -%}
-          {{- config.get('general/sitename') -}}
-        </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="{{ asset('css/main.css', 'theme') }}" />
-        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-        <link rel="stylesheet" type="text/css" href="/app/view/css/magnific-popup.css">
+<!DOCTYPE html>
+<html lang="fr">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/theme/theme-gsq-solid-state/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/theme/theme-gsq-solid-state/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/theme/theme-gsq-solid-state/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/theme/theme-gst-solid-state/favicon/site.webmanifest">
-        <link rel="mask-icon" href="/theme/theme-gst-solid-state/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="/theme/theme-gst-solid-state/favicon/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/theme/theme-gst-solid-state/favicon/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="agentic AI, AI startup, AI features, document AI, code AI, review AI, AI solutions">
+    <meta name="description" content="Showcase our agentic AI startup and explore our three main features: Document, Code, and Review. Revolutionize your workflow with intelligent AI solutions.">
+    <meta property="og:site_name" content="Au fil de la Plume - Graphothérapie">
+    <meta property="og:url" content="https://www.aufildelaplume.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Au fil de la Plume - Rééducation de l'écriture sur Cahors, 46">
+    <meta name='og:image' content='images/assets/ogg.png'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFEB88">
+    <meta name="msapplication-navbutton-color" content="#FFEB88">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFEB88">
+    <title>
+      {{- record.title ~ ' | ' -}}
+      {{- config.get('general/sitename') -}} 
+    </title>
+    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/fav-icon/icon.svg', 'theme') }}">
 
-        <!-- Page Wrapper -->
-            <div id="page-wrapper">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css', 'theme') }}" media="all">
+	<!-- Main style sheet -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.min.css', 'theme') }}" media="all">
+	<!-- responsive style sheet -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css', 'theme') }}" media="all">
 
-                <!-- Header -->
-                    <header id="header" {% block headerClass %}{% endblock headerClass %}>
-                        <h1><a href="/">{{ config.get('general/sitename') -}}</a></h1>
-                        <nav>
-                            <a href="#menu">Menu</a>
-                        </nav>
-                    </header>
+	<!-- Fix Internet Explorer ______________________________________-->
+	<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="{{ asset('vendor/html5shiv.js', 'theme') }}"></script>
+			<script src="{{ asset('vendor/respond.js', 'theme') }}"></script>
+		<![endif]-->
+</head>
 
-                <!-- Menu -->
-                    <nav id="menu">
-                        <div class="inner">
-                            <h2>Menu</h2>
-                            <ul class="links">
-                                {{ menu('main', '_menu.twig') }}
-                            </ul>
-                            <a href="#" class="close">Close</a>
-                        </div>
-                    </nav>
+<body>
+	<div class="main-page-wrapper">
+		<!-- ===================================================
+			Loading Transition
+		==================================================== -->
+		<div id="preloader">
+			<div id="ctn-preloader" class="ctn-preloader">
+				<div class="icon"><img src="{{ asset('images/loader.svg', 'theme') }}" alt="" class="m-auto d-block"> <span></span></div>
+				<div class="txt-loading">
+					<span data-text-preloader="A" class="letters-loading">
+						A
+					</span>
+					<span data-text-preloader="U" class="letters-loading">
+						U
+					</span>
 
-                {% block banner %}
-                    {# Banner for index.twig #}
-                {% endblock banner %}
+					<span data-text-preloader=" " class="letters-loading">
+						&nbsp
+					</span>
 
-                <!-- Wrapper -->
-                    <section id="wrapper">
+
+					<span data-text-preloader="F" class="letters-loading">
+						F
+					</span>
+					<span data-text-preloader="I" class="letters-loading">
+						I
+					</span>
+					<span data-text-preloader="L" class="letters-loading">
+						L
+					</span>
+
+					<span data-text-preloader=" " class="letters-loading">
+						&nbsp
+					</span>
+
+					<span data-text-preloader="D" class="letters-loading">
+						D
+					</span>
+					<span data-text-preloader="E" class="letters-loading">
+						E
+					</span>
+
+					<span data-text-preloader=" " class="letters-loading">
+						&nbsp
+					</span>
+
+					<span data-text-preloader="L" class="letters-loading">
+						L
+					</span>
+					<span data-text-preloader="A" class="letters-loading">
+						A
+					</span>
+					<span data-text-preloader=" " class="letters-loading">
+						&nbsp
+					</span>
+					<span data-text-preloader="P" class="letters-loading">
+						P
+					</span>
+					<span data-text-preloader="L" class="letters-loading">
+						L
+					</span>
+					<span data-text-preloader="U" class="letters-loading">
+						U
+					</span>
+					<span data-text-preloader="M" class="letters-loading">
+						M
+					</span>
+					<span data-text-preloader="E" class="letters-loading">
+						E
+					</span>
+                </div>
+			</div>
+		</div>
+
+		<!--
+		=============================================
+			Theme Main Menu
+		==============================================
+		-->
+		<header class="theme-main-menu menu-style-one gap-one menu-overlay sticky-menu">
+			<div class="inner-content">
+				<div class="top-header position-relative">
+					<div class="d-flex align-items-center">
+						<div class="logo order-lg-0">
+							<a href="index.html" class="d-flex align-items-center">
+								<img src="{{ asset('images/logo/logo_01.svg', 'theme') }}" height="45px" alt="">
+                                                                &nbsp; Au fil de la Plume -- Graphotérapie
+							</a>
+						</div>
+						<!-- logo -->
+
+                        <nav class="navbar navbar-expand-lg p0 order-lg-2">
+							<button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
+								data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav align-items-lg-center">
+									<li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="{{ asset('images/logo/logo_01.svg', 'theme') }}" alt=""></a></div></li>
+                                                                        {% setcontent lastPages = 'pages' earliest limit 10 %}
+                                                                        {% for page in lastPages %}
+                                                                        <!-- Loop {{ loop.index }} -->
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="{{ page|link }}">
+                                                                                  {{ page.title }}
+										</a>
+									</li>
+                                                                        {% endfor %}
+
+								</ul>
+							</div>
+						</nav>
+
+                    </div>
+				</div> <!--/.top-header-->
+			</div> <!-- /.inner-content -->
+		</header>
+		<!-- /.theme-main-menu -->
 
                     {% block content %}
 
@@ -67,40 +162,141 @@
 
                     {% endblock content %}
 
-                    </section>
 
-                <!-- Footer -->
-                {% block footer %}
+		<!--
+		=====================================================
+			Footer One
+		=====================================================
+		-->
+		<div class="footer-one bg-one">
+			<div class="container">
+<!--
+				<div class="newsletter-area mb-100 md-mb-70">
+					<div class="row align-items-center">
+						<div class="col-lg-4">
+							<h2>Subscribe To Our Newsletter</h2>
+						</div>
+						<div class="col-lg-8">
+							<form action="#">
+								<input type="email" placeholder="mriad6164@gmail.com">
+								<button class="d-flex align-items-center"><span>Subscribe</span> <img src="{{ asset('images/icon/icon_13.svg', 'theme') }}" alt=""></button>
+							</form>
+						</div>
+					</div>
+				</div>
+-->
+				<div class="position-relative">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="footer-intro mb-30 md-mb-50 me-xxl-5 pe-xxl-4">
+								<a href="index.html"><img src="{{ asset('images/logo/logo_02.svg', 'theme') }}" alt=""></a>
+								<!--<p>We are 300+ specialists across investment strategy and business </p>-->
+								<h6>Viendez nous voir!</h6>
+                                                                <!--
+								<ul class="style-none d-flex social-icon">
+									<li><a href="https://github.com/pullhero/"><i class="fa-brands fa-github"></i></a></li>
+								</ul>
+                                                                -->
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="footer-contact mb-20 sm-mb-40">
 
-                    {% include '_footer.twig' %}
+								<h6 class="footer-title">Le Cabinet</h6>
+								<p>246, Chemin de la Combe del Trel<br> 46000, Cahors</p>
+								<ul class="style-none">
+									<li><a href="#" class="email tran3s">contact chez aufildelaplume.org</a></li>
+									<li><a href="#" class="tel tran3s">(+33) 06 12 34 56 78</a></li>
+								</ul>
 
-                {% endblock footer %}
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6">
+							<div class="footer-nav mb-40">
+<!--
+								<h6 class="footer-title">Links</h6>
+								<ul class="footer-nav-link style-none">
+									<li><a href="pricing-v1.html">Pricing Plan</a></li>
+									<li><a href="about-us-v2.html">About us</a></li>
+									<li><a href="project-v1.html">Case Gallery</a></li>
+									<li><a href="faq.html">Privacy Policy</a></li>
+									<li><a href="faq.html">Term</a></li>
+								</ul>
+-->
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-3 col-6">
+							<div class="text-end">
 
-            </div>
+								<div class="footer-nav d-inline-block text-start mb-40">
+									<h6 class="footer-title">Company</h6>
+									<ul class="footer-nav-link style-none">
+										<li><a href="faq.html">Faq’s</a></li>
+										<li><a href="team.html">Meet our team</a></li>
+										<li><a href="blog-v1.html">Latest news</a></li>
+										<li><a href="contact.html">Contact</a></li>
+										<li><a href="blog-v1.html">Careers</a></li>
+									</ul>
+								</div>
 
-        <!-- Scripts -->
-            <script src="{{ asset('js/skel.min.js', 'theme') }}"></script>
-            <script src="{{ asset('js/jquery.min.js', 'theme') }}"></script>
-            <script src="{{ asset('js/jquery.scrollex.min.js', 'theme') }}"></script>
-            <script src="{{ asset('js/util.js', 'theme') }}"></script>
-            <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
-            <script src="{{ asset('js/main.js', 'theme') }}"></script>
-            <script src="/app/view/js/jquery.magnific-popup.min.js"></script>
-            {# set up lightbox script here, or do this in your own .js file somewhere #}
-            <script type="text/javascript">
-              $(document).ready(function() {
-                $('.magnific').addClass("image");
-                $('.magnific').magnificPopup({
-                    type: 'image',
-                    closeOnContentClick: true,
-                    mainClass: 'mfp-img-mobile',
-                    image: {
-                        verticalFit: true
-                    }
-                    // other options
-                });
-              });
-            </script>
+							</div>
+						</div>
 
-    </body>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<div class="bottom-footer">
+					<div class="d-md-flex align-items-center justify-content-between">
+						<div class="d-flex justify-content-center align-items-center sm-mb-10 order-md-last">
+							<ul class="style-none d-flex justify-content-center">
+								<li><a href="https://github.com/pullhero/review">Review  &nbsp;.</a></li>
+								<li><a href="https://github.com/pullhero/code">Code &nbsp;.</a></li>
+								<li><a href="https://github.com/pullhero/document">Document &nbsp;.</a></li>
+								<li><a href="https://github.com/pullhero/consult">Consult</a></li>
+							</ul>
+						</div>
+						<p class="copyright-text text-center m0">Marine Pouget - Au fil de la plume © 2025 tous droits réservés.</p>
+					</div>
+				</div>
+			</div>
+
+            <img src="{{ asset('images/shape/shape_69.svg', 'theme') }}" alt="" class="shapes shape_02">
+		</div> <!-- /.footer-one -->
+
+
+
+
+		<button class="scroll-top">
+			<i class="bi bi-arrow-up-short"></i>
+		</button>
+
+
+
+
+		<!-- Optional JavaScript _____________________________  -->
+
+		<!-- jQuery first, then Bootstrap JS -->
+		<!-- jQuery -->
+		<script src="{{ asset('vendor/jquery.min.js', 'theme') }}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js', 'theme') }}"></script>
+		<!-- WOW js -->
+		<script src="{{ asset('vendor/sal/sal.js', 'theme') }}"></script>
+		<!-- Slick Slider -->
+		<script src="{{ asset('vendor/slick/slick.min.js', 'theme') }}"></script>
+		<!-- Fancybox -->
+		<script src="{{ asset('vendor/fancybox/fancybox.umd.js', 'theme') }}"></script>
+		<!-- js Counter -->
+		<script src="{{ asset('vendor/jquery.counterup.min.js', 'theme') }}"></script>
+		<script src="{{ asset('vendor/jquery.waypoints.min.js', 'theme') }}"></script>
+		<!-- validator js -->
+		<script src="{{ asset('vendor/validator.js', 'theme') }}"></script>
+
+		<!-- Theme js -->
+		<script src="{{ asset('js/theme.js', 'theme') }}"></script>
+	</div> <!-- /.main-page-wrapper -->
+</body>
+
 </html>
