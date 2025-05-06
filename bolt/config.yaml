@@ -1,6 +1,6 @@
 # The name of the website
-sitename: Groupe Spéléologique du Quercy
-payoff: Le club Cadurciens des passionnés des cavités lotoises
+sitename: Au Fil de la Plume
+payoff: Marine Pouget - Graphothérapie
 
 secret: '%env(APP_SECRET)%'
 
