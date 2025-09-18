@@ -23,7 +23,7 @@
       {% endif %}
       {{- config.get('general/sitename') -}} 
     </title>
-    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/fav-icon/icon.svg', 'theme') }}">
+    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('images/logo/logo-mini.png', 'theme') }}">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css', 'theme') }}" media="all">
@@ -53,7 +53,7 @@
 					<div class="d-flex align-items-center">
 						<div class="logo order-lg-0">
 							<a href="/" class="d-flex align-items-center">
-								<img src="{{ asset('images/logo/logo_01.svg', 'theme') }}" height="45px" alt="">
+								<img src="{{ asset('images/logo/logo-mini.png', 'theme') }}" height="45px" alt="">
                                                                 Au fil de la Plume
 							</a>
 						</div>
@@ -67,7 +67,7 @@
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNav">
 								<ul class="navbar-nav align-items-lg-center">
-									<li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="{{ asset('images/logo/logo_01.svg', 'theme') }}" alt=""></a></div></li>
+									<li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="{{ asset('images/logo/logo-mini.png', 'theme') }}" alt=""></a></div></li>
                                                                         {% setcontent lastPages = 'pages' earliest limit 10 %}
                                                                         {% for page in lastPages %}
                                                                         <!-- Loop {{ loop.index }} -->
@@ -102,21 +102,6 @@
 		-->
 		<div class="footer-one bg-one">
 			<div class="container">
-<!--
-				<div class="newsletter-area mb-100 md-mb-70">
-					<div class="row align-items-center">
-						<div class="col-lg-4">
-							<h2>Subscribe To Our Newsletter</h2>
-						</div>
-						<div class="col-lg-8">
-							<form action="#">
-								<input type="email" placeholder="mriad6164@gmail.com">
-								<button class="d-flex align-items-center"><span>Subscribe</span> <img src="{{ asset('images/icon/icon_13.svg', 'theme') }}" alt=""></button>
-							</form>
-						</div>
-					</div>
-				</div>
--->
 				<div class="position-relative">
 					<div class="row">
 						<div class="col-lg-4">
@@ -138,42 +123,17 @@
 								<h6 class="footer-title">Le Cabinet</h6>
 								<p>246, Chemin de la Combe del Trel<br> 46000, Cahors</p>
 								<ul class="style-none">
-									<li><a href="#" class="email tran3s">contact chez aufildelaplume.org</a></li>
-									<li><a href="#" class="tel tran3s">(+33) 06 12 34 56 78</a></li>
+									<li><a href="mailto:contact@aufildelaplume.org" class="email tran3s">contact@aufildelaplume.org</a></li>
+									<li><a href="tel:0743604586" class="tel tran3s">(+33) 07 43 60 45 86</a></li>
 								</ul>
 
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-3 col-6">
 							<div class="footer-nav mb-40">
-<!--
-								<h6 class="footer-title">Links</h6>
-								<ul class="footer-nav-link style-none">
-									<li><a href="pricing-v1.html">Pricing Plan</a></li>
-									<li><a href="about-us-v2.html">About us</a></li>
-									<li><a href="project-v1.html">Case Gallery</a></li>
-									<li><a href="faq.html">Privacy Policy</a></li>
-									<li><a href="faq.html">Term</a></li>
-								</ul>
--->
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-3 col-6">
-                                                  <!--
-							<div class="text-end">
-
-								<div class="footer-nav d-inline-block text-start mb-40">
-									<h6 class="footer-title">Company</h6>
-									<ul class="footer-nav-link style-none">
-										<li><a href="faq.html">Faq’s</a></li>
-										<li><a href="team.html">Meet our team</a></li>
-										<li><a href="blog-v1.html">Latest news</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="blog-v1.html">Careers</a></li>
-									</ul>
-								</div>
-							</div>
-                                                        -->
 						</div>
 
 					</div>
@@ -184,14 +144,6 @@
 				<div class="bottom-footer">
 					<div class="d-md-flex align-items-center justify-content-between">
 						<div class="d-flex justify-content-center align-items-center sm-mb-10 order-md-last">
-                                                  <!--
-							<ul class="style-none d-flex justify-content-center">
-								<li><a href="https://github.com/pullhero/review">Review  &nbsp;.</a></li>
-								<li><a href="https://github.com/pullhero/code">Code &nbsp;.</a></li>
-								<li><a href="https://github.com/pullhero/document">Document &nbsp;.</a></li>
-								<li><a href="https://github.com/pullhero/consult">Consult</a></li>
-							</ul>
-                                                        -->
 						</div>
 						<p class="copyright-text text-center m0">Marine Pouget - Au fil de la plume © 2025 tous droits réservés.</p>
 					</div>
